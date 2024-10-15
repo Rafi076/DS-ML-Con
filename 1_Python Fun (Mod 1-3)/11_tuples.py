@@ -36,4 +36,31 @@ index_of_two_from_index_8_to_15 = countries.index(2,8,15)
 print("index_of_two_from_index_8_to_15 : ",index_of_two_from_index_8_to_15) # index_of_two_from_index_8_to_15 :  11
 
 
- 
+# Repetition:
+repeated_tuple = ('A',) * 3
+print(repeated_tuple)  # Output: ('A', 'A', 'A')
+
+
+# index(element): Returns the index of the first occurrence of the element.
+my_tuple = (10, 20, 30, 20)
+print(my_tuple.index(20))  # Output: 1
+
+
+# Swapping Two Variables Using Tuples
+# Swapping values without a temporary variable
+a = 5
+b = 10
+# Packing and unpacking
+a, b = b, a
+print(f"a = {a}, b = {b}")  # Output: a = 10, b = 5
+
+
+
+# Tuple Unpacking
+# Unpacking a tuple into variables
+person = ("Alice", 25, "Engineer")
+name, age, profession = person
+
+print(name)       # Output: Alice
+print(age)        # Output: 25
+print(profession) # Output: Engineer

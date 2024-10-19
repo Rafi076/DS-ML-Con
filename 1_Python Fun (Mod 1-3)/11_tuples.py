@@ -1,3 +1,137 @@
+# prompt: is list , tuple, set  .. mutable,order, duplicte allow?
+
+# | Feature       | List      | Tuple     | Set       |
+# |---------------|-----------|-----------|-----------|
+# | Mutable       | Yes       | No        | Yes       |
+# | Ordered       | Yes       | Yes       | No        |
+# | Duplicates    | Yes       | Yes       | No        |
+
+
+
+# prompt: Tuples exampl
+
+password = ("my_secret_password",)
+print(password[0])  # Output: my_secret_password
+user_credentials = ("john_doe", "password123")
+username, password = user_credentials
+print(f"Username: {username}, Password: {password}")
+
+
+
+mixed_set = {1,'hi',23,4}
+print(mixed_set) # unorderd print
+
+
+num = {1,3,5,1,4}
+print(num) # dont print duplicate value
+
+
+
+# prompt: covert a list to set then again in set to remove duplicate value
+
+my_list = [1, 2, 2, 3, 4, 4, 5]
+my_set = set(my_list)
+my_new_list = list(my_set)
+print(my_new_list)
+
+
+
+
+# prompt: discard & remove work same
+
+my_set = {1, 2, 3}
+
+# Using remove()
+my_set.remove(2)
+print(my_set)  # Output: {1, 3}
+
+# Using remove() on a non-existent element
+# my_set.remove(4)  # Raises a KeyError
+
+# Using discard()
+my_set.discard(3)
+print(my_set)  # Output: {1}
+
+# Using discard() on a non-existent element
+my_set.discard(4)  # Does nothing, no error is raised
+print(my_set)  # Output: {1}
+
+
+
+
+
+# prompt: | , & in set
+
+# Set Operations: Union, Intersection, Difference
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+# Union (|) - Combines elements from both sets without duplicates
+union_set = set1 | set2
+print("Union:", union_set)  # Output: {1, 2, 3, 4, 5}
+
+# Intersection (&) - Returns common elements between sets
+intersection_set = set1 & set2
+print("Intersection:", intersection_set)  # Output: {3}
+
+# Difference (-) - Returns elements in the first set but not in the second
+difference_set = set1 - set2
+print("Difference (set1 - set2):", difference_set)  # Output: {1, 2}
+
+difference_set = set2 - set1
+print("Difference (set2 - set1):", difference_set)  # Output: {4, 5}
+
+
+set1 = {1,2,3}
+set2 = {3,4,5}
+unionofset = set1|set2
+print(unionofset)
+
+
+common = set1 & set2
+print(common)
+
+
+unique_to_set1 = set1 - set2
+print(unique_to_set1)
+
+
+
+
+# Create a set of squares of numbers from 1 to 10 using set comprehension
+squares = {x**2 for x in range(1, 11)}
+print(squares)
+
+# Create a set of even numbers from a list using set comprehension
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = {x for x in numbers if x % 2 == 0}
+print(even_numbers)
+
+# Create a set of unique characters from a string using set comprehension
+string = "hello world"
+unique_characters = {char for char in string}
+print(unique_characters)
+
+
+
+
+# Assingment 2:
+
+my = {'ctg','srimongal','dhaka'}
+frnd = {'ctg','khulna','dhaka'}
+
+intersection_set = my & frnd
+print("Intersection:", intersection_set)
+print("Only i Visited: ",my - frnd)
+print("Only frnd Visited: ",frnd -my)
+
+# Intersection: {'dhaka', 'ctg'}
+# Only i Visited:  {'srimongal'}
+# Only frnd Visited:  {'khulna'}
+
+
+
 # tuples are ordered collection of data item. they store multiple item in a single variable.
 # tuple item are separated by comma and enclosed within round brackets ()
 # tupels are unchangeable meaning we can not alter them after creation like list

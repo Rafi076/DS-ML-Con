@@ -1,12 +1,13 @@
 #  Object-Oriented Programming (OOP) in Python
 # OOP focuses on creating reusable code by organizing it around objects and classes. Below are the core concepts illustrated in your slides.
 
+
+
+
 # 🧩 1. Classes and Objects
 # Class: A blueprint for creating objects, containing attributes and methods.
 # Object: An instance of a class with actual values.
 # Example: Defining a Class and Creating an Object
-
-
 
 class Student:
     roll = ""   # Attribute 1
@@ -47,7 +48,8 @@ kamal.display()
 # Constructor is a special method (__init__) called when an object is created.
 # 3.1 Default Constructor
 
-class Student:
+#  __init__ is a constractor. we use constractor when we want to initialze any value in a object
+class Student:              
     def __init__(self):
         self.section = "A"
 
@@ -127,6 +129,57 @@ obj.display3()
 # This is class C
 
 
+# 🧩 4.3. Hierarchical Inheritance
+class Parent:
+    def func1(self):
+        print("This function is in parent class.")
+
+class Child1(Parent):
+    def func2(self):
+        print("This function is in child 1.")
+
+class Child2(Parent):
+    def func3(self):
+        print("This function is in child 2.")
+
+obj1 = Child1()
+obj2 = Child2()
+
+obj1.func1()
+obj1.func2()
+obj2.func1()
+obj2.func3()
+# Output:
+# This function is in parent class.
+# This function is in child 1.
+# This function is in parent class.
+# This function is in child 2.
+
+
+
+
+
+# 🧩 4.4. Multilevel Inheritance
+class A:
+    def display1(self):
+        print("This is class A")
+
+class B(A):
+    def display2(self):
+        print("This is class B")
+
+class C(B):
+    def display3(self):
+        print("This is class C")
+
+obj = C()
+obj.display1()
+obj.display2()
+obj.display3()
+# Output:
+# This is class A
+# This is class B
+# This is class C
 
 
 
@@ -157,6 +210,7 @@ print(kamal.roll)        # Output: 10
 print(len("Aksadur"))   # Output: 7
 print(len([10, 20, 30]))  # Output: 3
 # User-defined Polymorphic Function
+#  here z=0 -->> refer if any 3rd argument send it will work ok! if does not come there will be no problem!! **** exciting solution ***
 def add(x, y, z=0):
     return x + y + z
 
@@ -203,55 +257,3 @@ def my_function():
     pass  # Will add logic later
 
 
-
-# 🧩 9. Hierarchical Inheritance
-class Parent:
-    def func1(self):
-        print("This function is in parent class.")
-
-class Child1(Parent):
-    def func2(self):
-        print("This function is in child 1.")
-
-class Child2(Parent):
-    def func3(self):
-        print("This function is in child 2.")
-
-obj1 = Child1()
-obj2 = Child2()
-
-obj1.func1()
-obj1.func2()
-obj2.func1()
-obj2.func3()
-# Output:
-# This function is in parent class.
-# This function is in child 1.
-# This function is in parent class.
-# This function is in child 2.
-
-
-
-
-
-# 🧩 10. Multilevel Inheritance
-class A:
-    def display1(self):
-        print("This is class A")
-
-class B(A):
-    def display2(self):
-        print("This is class B")
-
-class C(B):
-    def display3(self):
-        print("This is class C")
-
-obj = C()
-obj.display1()
-obj.display2()
-obj.display3()
-# Output:
-# This is class A
-# This is class B
-# This is class C
